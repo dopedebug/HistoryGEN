@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from modelAIFin import get_event_summary
-
+import os 
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -25,4 +25,6 @@ def summary_post():
     })
 
 # Start the app
-app.run()
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
