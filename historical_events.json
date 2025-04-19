@@ -1,0 +1,79 @@
+[
+    {
+        "event_name": "World War I",
+        "description": "A global war that originated in Europe and lasted from 1914 to 1918, involving many of the world's great powers.",
+        "factors": [
+            "Militarism",
+            "Alliances",
+            "Imperialism",
+            "Nationalism",
+            "Assassination of Archduke Franz Ferdinand"
+        ],
+        "people_involved": [
+            "Archduke Franz Ferdinand",
+            "Gavrilo Princip",
+            "Kaiser Wilhelm II",
+            "Woodrow Wilson",
+            "David Lloyd George"
+        ],
+        "timeline": {
+            "start": "28 June 1914",
+            "end": "11 November 1918"
+        },
+        "sub_events": [
+            {
+                "name": "Assassination of Archduke Franz Ferdinand",
+                "description": "The heir to the Austro-Hungarian throne was assassinated in Sarajevo by Gavrilo Princip, sparking the war.",
+                "date": "28 June 1914"
+            },
+            {
+                "name": "Austria-Hungary declares war on Serbia",
+                "description": "Triggered by the assassination, Austria-Hungary declared war on Serbia.",
+                "date": "28 July 1914"
+            },
+            {
+                "name": "Battle of the Somme",
+                "description": "One of the bloodiest battles in WWI with over one million casualties.",
+                "date": "1 July \u2013 18 November 1916"
+            }
+        ]
+    },
+    {
+        "event_name": "The Fall of the Berlin Wall",
+        "description": "The Berlin Wall, a symbol of the Cold War, was brought down, marking the beginning of the end of Soviet influence in Eastern Europe.",
+        "factors": [
+            "Economic decline in East Germany",
+            "Mass protests",
+            "Reform policies of Mikhail Gorbachev",
+            "Relaxation of border restrictions by Hungary",
+            "East German migration to the West"
+        ],
+        "people_involved": [
+            "Mikhail Gorbachev",
+            "Ronald Reagan",
+            "Erich Honecker",
+            "Helmut Kohl"
+        ],
+        "timeline": {
+            "start": "1989-10-01",
+            "end": "1989-11-09"
+        },
+        "sub_events": [
+            {
+                "name": "Pan-European Picnic",
+                "description": "Hungary temporarily opened its border with Austria, allowing hundreds of East Germans to flee.",
+                "date": "19 August 1989"
+            },
+            {
+                "name": "Mass protests in Leipzig",
+                "description": "Peaceful Monday demonstrations grew rapidly, pressuring the East German government.",
+                "date": "September\u2013November 1989"
+            },
+            {
+                "name": "Opening of Berlin Wall",
+                "description": "Following political turmoil, border crossings were opened, and crowds began dismantling the wall.",
+                "date": "9 November 1989"
+            }
+        ]
+    }
+]
