@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify
-from flask_ngrok import run_with_ngrok
 from modelAIFin import get_event_summary
 
 
 # Initialize Flask app
 app = Flask(__name__)
-run_with_ngrok(app)
+
 
 
 @app.route('/summary', methods=['GET'])
