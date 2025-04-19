@@ -1,25 +1,29 @@
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
+from flask import Flask, request, jsonify
 from modelAIFin import get_event_summary
-from fastapi.responses import HTMLResponse
 
-app = FastAPI()
 
-# For GET requests (HTML-style browser rendering)
-@app.get("/summary", response_class=HTMLResponse)
-async def get_summary(event_name: str = ""):
+# Initialize Flask app
+app = Flask(__name__)
+
+
+
+@app.route('/summary', methods=['GET'])
+def summary_get():
+    event_name = request.args.get("event_name", "")
     summary = get_event_summary(event_name)
     return f"<pre>{summary}</pre>"
 
-# For POST requests (API-style usage)
-class EventRequest(BaseModel):
-    event_name: str
-
-@app.post("/api/summary")
-async def post_summary(request_data: EventRequest):
-    summary = get_event_summary(request_data.event_name)
-    return {
-        "event_name": request_data.event_name,
+# POST method: accepts JSON and returns JSON
+@app.route('/api/summary', methods=['POST'])
+def summary_post():
+    data = request.get_json()
+    event_name = data.get("event_name", "")
+    summary = get_event_summary(event_name)
+    return jsonify({
+        "event_name": event_name,
         "summary": summary
-    }
+    })
+
+# Start the app
+app.run()
 
